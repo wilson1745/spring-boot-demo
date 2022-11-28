@@ -10,23 +10,29 @@ import org.springframework.stereotype.Repository;
 import com.example.demo.dao.CountyDao;
 import com.example.demo.entity.County;
 
+/**
+ * @Function: CountyDaoImpl.java
+ * @Description:
+ * @author: Wilson Lo
+ * @date: 2022/11/28
+ * @MaintenancePersonnel: Wilson Lo
+ */
 @Repository
 public class CountyDaoImpl implements CountyDao {
 
-	@Autowired
-	private JdbcTemplate jdbcTemplate;
+    /** The jdbc template. */
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
 
-	@Override
-	public List<County> findAllCounty() {
-		// TODO Auto-generated method stub
-		String sql = " SELECT "
-				   + "		ID, NAME "
-				   + " FROM "
-				   + "		test_project.county "
-				   + " ORDER BY "
-				   + "		ID ";
-
-		return jdbcTemplate.query(sql, new BeanPropertyRowMapper<County>(County.class));
-	}
+    /**
+     * (non-Javadoc)
+     *
+     * @see com.example.demo.dao.CountyDao#findAllCounty()
+     */
+    @Override
+    public List<County> findAllCounty() {
+        String sql = " SELECT ID, NAME FROM mydb.county ORDER BY ID ";
+        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<County>(County.class));
+    }
 
 }

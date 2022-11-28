@@ -181,3 +181,242 @@ org.springframework.beans.NotReadablePropertyException: Invalid property 'userna
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
+2022-11-28 === [restartedMain] === INFO  === com.example.demo.SpringBootDemoApplication ==== Starting SpringBootDemoApplication using Java 1.8.0_241 on LAPTOP-WILSON-CYBER with PID 20156 (C:\Users\wilso\git\spring-boot-demo\target\classes started by wilso in C:\Users\wilso\git\spring-boot-demo)
+2022-11-28 === [restartedMain] === INFO  === com.example.demo.SpringBootDemoApplication ==== No active profile set, falling back to default profiles: default
+2022-11-28 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-28 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-28 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2022-11-28 === [restartedMain] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2022-11-28 === [restartedMain] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-11-28 === [restartedMain] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2022-11-28 === [restartedMain] === INFO  === o.s.b.w.s.c.ServletWebServerApplicationContext ==== Root WebApplicationContext: initialization completed in 8242 ms
+2022-11-28 === [restartedMain] === INFO  === o.s.b.d.autoconfigure.OptionalLiveReloadServer ==== LiveReload server is running on port 35729
+2022-11-28 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-28 === [restartedMain] === INFO  === com.example.demo.SpringBootDemoApplication ==== Started SpringBootDemoApplication in 11.05 seconds (JVM running for 12.318)
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 1 ms
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== Return: login
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login Time spent: 31
+2022-11-28 === [http-nio-8080-exec-6] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /register
+2022-11-28 === [http-nio-8080-exec-6] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /register
+2022-11-28 === [http-nio-8080-exec-6] === INFO  === com.example.demo.aop.MemberAccountAspect ==== Return: register
+2022-11-28 === [http-nio-8080-exec-6] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /register
+2022-11-28 === [http-nio-8080-exec-6] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /register Time spent: 5
+2022-11-28 === [http-nio-8080-exec-3] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2022-11-28 === [http-nio-8080-exec-3] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2022-11-28 === [http-nio-8080-exec-3] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-4] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-8] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-10] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-1] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-3] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-4] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-8] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-10] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-1] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-3] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-4] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-8] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-10] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-1] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-3] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-4] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-8] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-10] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-1] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-3] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-4] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-8] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT 		ID, USERNAME, PASSWORD, SALT  FROM 		test_project.member_account  WHERE 		USERNAME = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [restartedMain] === INFO  === com.example.demo.SpringBootDemoApplication ==== Starting SpringBootDemoApplication using Java 1.8.0_241 on LAPTOP-WILSON-CYBER with PID 9572 (C:\Users\wilso\git\spring-boot-demo\target\classes started by wilso in C:\Users\wilso\git\spring-boot-demo)
+2022-11-28 === [restartedMain] === INFO  === com.example.demo.SpringBootDemoApplication ==== No active profile set, falling back to default profiles: default
+2022-11-28 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-28 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-28 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2022-11-28 === [restartedMain] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2022-11-28 === [restartedMain] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-11-28 === [restartedMain] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2022-11-28 === [restartedMain] === INFO  === o.s.b.w.s.c.ServletWebServerApplicationContext ==== Root WebApplicationContext: initialization completed in 11285 ms
+2022-11-28 === [restartedMain] === INFO  === o.s.b.d.autoconfigure.OptionalLiveReloadServer ==== LiveReload server is running on port 35729
+2022-11-28 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-28 === [restartedMain] === INFO  === com.example.demo.SpringBootDemoApplication ==== Started SpringBootDemoApplication in 15.686 seconds (JVM running for 17.008)
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 0 ms
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2022-11-28 === [http-nio-8080-exec-2] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'memberAccountVO' on field 'password': rejected value [1qaz@WSX!]; codes [Pattern.memberAccountVO.password,Pattern.password,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [memberAccountVO.password,password]; arguments []; default message [password],[Ljavax.validation.constraints.Pattern$Flag;@62e3da1f,^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[\w]{6,16}$]; default message [密碼必須為長度6~16位碼大小寫英文加數字]]
+2022-11-28 === [http-nio-8080-exec-3] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-3] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-3] === INFO  === com.example.demo.aop.MemberAccountAspect ==== Return: login
+2022-11-28 === [http-nio-8080-exec-3] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-3] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login Time spent: 62
+2022-11-28 === [restartedMain] === INFO  === com.example.demo.SpringBootDemoApplication ==== Starting SpringBootDemoApplication using Java 1.8.0_241 on LAPTOP-WILSON-CYBER with PID 10280 (C:\Users\wilso\git\spring-boot-demo\target\classes started by wilso in C:\Users\wilso\git\spring-boot-demo)
+2022-11-28 === [restartedMain] === INFO  === com.example.demo.SpringBootDemoApplication ==== No active profile set, falling back to default profiles: default
+2022-11-28 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-28 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-28 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2022-11-28 === [restartedMain] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2022-11-28 === [restartedMain] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-11-28 === [restartedMain] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2022-11-28 === [restartedMain] === INFO  === o.s.b.w.s.c.ServletWebServerApplicationContext ==== Root WebApplicationContext: initialization completed in 8794 ms
+2022-11-28 === [restartedMain] === INFO  === o.s.b.d.autoconfigure.OptionalLiveReloadServer ==== LiveReload server is running on port 35729
+2022-11-28 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-28 === [restartedMain] === INFO  === com.example.demo.SpringBootDemoApplication ==== Started SpringBootDemoApplication in 12.08 seconds (JVM running for 13.536)
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 1 ms
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /register
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /register
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== Return: register
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /register
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /register Time spent: 25
+2022-11-28 === [http-nio-8080-exec-6] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2022-11-28 === [http-nio-8080-exec-6] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2022-11-28 === [http-nio-8080-exec-2] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doRegister
+2022-11-28 === [http-nio-8080-exec-2] === WARN  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doRegister
+2022-11-28 === [http-nio-8080-exec-2] === WARN  === com.example.demo.aop.MemberAccountAspect ==== PreparedStatementCallback; bad SQL grammar [ INSERT INTO test_project.member_account (USERNAME, PASSWORD, SALT, 	CREATE_BY, CREATE_TIME, UPDATE_BY, UPDATE_TIME) VALUE ( 	?, ?, ?, ?, NOW(), ?, NOW()) ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project'
+2022-11-28 === [http-nio-8080-exec-2] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doRegister
+2022-11-28 === [http-nio-8080-exec-2] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ INSERT INTO test_project.member_account (USERNAME, PASSWORD, SALT, 	CREATE_BY, CREATE_TIME, UPDATE_BY, UPDATE_TIME) VALUE ( 	?, ?, ?, ?, NOW(), ?, NOW()) ]; nested exception is java.sql.SQLSyntaxErrorException: Unknown database 'test_project']
+2022-11-28 === [http-nio-8080-exec-2] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-2] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-2] === INFO  === com.example.demo.aop.MemberAccountAspect ==== Return: login
+2022-11-28 === [http-nio-8080-exec-2] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-2] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login Time spent: 2
+2022-11-28 === [restartedMain] === INFO  === com.example.demo.SpringBootDemoApplication ==== Starting SpringBootDemoApplication using Java 1.8.0_241 on LAPTOP-WILSON-CYBER with PID 4216 (C:\Users\wilso\git\spring-boot-demo\target\classes started by wilso in C:\Users\wilso\git\spring-boot-demo)
+2022-11-28 === [restartedMain] === INFO  === com.example.demo.SpringBootDemoApplication ==== No active profile set, falling back to default profiles: default
+2022-11-28 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-28 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-28 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2022-11-28 === [restartedMain] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2022-11-28 === [restartedMain] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-11-28 === [restartedMain] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2022-11-28 === [restartedMain] === INFO  === o.s.b.w.s.c.ServletWebServerApplicationContext ==== Root WebApplicationContext: initialization completed in 7586 ms
+2022-11-28 === [restartedMain] === INFO  === o.s.b.d.autoconfigure.OptionalLiveReloadServer ==== LiveReload server is running on port 35729
+2022-11-28 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-28 === [restartedMain] === INFO  === com.example.demo.SpringBootDemoApplication ==== Started SpringBootDemoApplication in 10.568 seconds (JVM running for 11.846)
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 2 ms
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /register
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /register
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== Return: register
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /register
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /register Time spent: 34
+2022-11-28 === [http-nio-8080-exec-4] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2022-11-28 === [http-nio-8080-exec-4] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2022-11-28 === [http-nio-8080-exec-8] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doRegister
+2022-11-28 === [http-nio-8080-exec-8] === WARN  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doRegister
+2022-11-28 === [http-nio-8080-exec-8] === WARN  === com.example.demo.aop.MemberAccountAspect ==== PreparedStatementCallback; bad SQL grammar [ INSERT INTO mydb.member (MA_ID, NAME, ID_NUMBER, BIRTHDAY, PHONE, C_ID, D_ID, ADDRESS, 	CREATE_BY, CREATE_TIME, UPDATE_BY, UPDATE_TIME) VALUE ( 	?, ?, ?, ?, ?, ?, ?, ?, 	?, NOW(), ?, NOW()) ]; nested exception is java.sql.SQLSyntaxErrorException: Table 'mydb.member' doesn't exist
+2022-11-28 === [http-nio-8080-exec-8] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doRegister
+2022-11-28 === [http-nio-8080-exec-8] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ INSERT INTO mydb.member (MA_ID, NAME, ID_NUMBER, BIRTHDAY, PHONE, C_ID, D_ID, ADDRESS, 	CREATE_BY, CREATE_TIME, UPDATE_BY, UPDATE_TIME) VALUE ( 	?, ?, ?, ?, ?, ?, ?, ?, 	?, NOW(), ?, NOW()) ]; nested exception is java.sql.SQLSyntaxErrorException: Table 'mydb.member' doesn't exist]
+2022-11-28 === [http-nio-8080-exec-8] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-8] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-8] === INFO  === com.example.demo.aop.MemberAccountAspect ==== Return: login
+2022-11-28 === [http-nio-8080-exec-8] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-8] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login Time spent: 2
+2022-11-28 === [http-nio-8080-exec-8] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /register
+2022-11-28 === [http-nio-8080-exec-8] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /register
+2022-11-28 === [http-nio-8080-exec-8] === INFO  === com.example.demo.aop.MemberAccountAspect ==== Return: register
+2022-11-28 === [http-nio-8080-exec-8] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /register
+2022-11-28 === [http-nio-8080-exec-8] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /register Time spent: 2
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== Return: login
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login Time spent: 3
+2022-11-28 === [http-nio-8080-exec-7] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'memberAccount' on field 'password': rejected value [1qaz@WSX!]; codes [Pattern.memberAccount.password,Pattern.password,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [memberAccount.password,password]; arguments []; default message [password],[Ljavax.validation.constraints.Pattern$Flag;@6f115fec,^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[\w]{6,16}$]; default message [密碼必須為長度6~16位碼大小寫英文加數字]]
+2022-11-28 === [http-nio-8080-exec-7] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-7] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-7] === INFO  === com.example.demo.aop.MemberAccountAspect ==== Return: login
+2022-11-28 === [http-nio-8080-exec-7] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-7] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login Time spent: 4
+2022-11-28 === [restartedMain] === INFO  === com.example.demo.SpringBootDemoApplication ==== Starting SpringBootDemoApplication using Java 1.8.0_241 on LAPTOP-WILSON-CYBER with PID 24676 (C:\Users\wilso\git\spring-boot-demo\target\classes started by wilso in C:\Users\wilso\git\spring-boot-demo)
+2022-11-28 === [restartedMain] === INFO  === com.example.demo.SpringBootDemoApplication ==== No active profile set, falling back to default profiles: default
+2022-11-28 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-28 === [restartedMain] === INFO  === o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor ==== For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-28 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2022-11-28 === [restartedMain] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2022-11-28 === [restartedMain] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet engine: [Apache Tomcat/9.0.52]
+2022-11-28 === [restartedMain] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2022-11-28 === [restartedMain] === INFO  === o.s.b.w.s.c.ServletWebServerApplicationContext ==== Root WebApplicationContext: initialization completed in 8462 ms
+2022-11-28 === [restartedMain] === INFO  === o.s.b.d.autoconfigure.OptionalLiveReloadServer ==== LiveReload server is running on port 35729
+2022-11-28 === [restartedMain] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 8080 (http) with context path ''
+2022-11-28 === [restartedMain] === INFO  === com.example.demo.SpringBootDemoApplication ==== Started SpringBootDemoApplication in 11.443 seconds (JVM running for 12.78)
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 1 ms
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doLogin
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2022-11-28 === [http-nio-8080-exec-1] === WARN  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doLogin
+2022-11-28 === [http-nio-8080-exec-1] === WARN  === com.example.demo.aop.MemberAccountAspect ==== 帳號或密碼錯誤
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doLogin
+2022-11-28 === [http-nio-8080-exec-1] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [com.example.demo.service.ex.PasswordNotMatchException: 帳號或密碼錯誤]
+2022-11-28 === [http-nio-8080-exec-2] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-2] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-2] === INFO  === com.example.demo.aop.MemberAccountAspect ==== Return: login
+2022-11-28 === [http-nio-8080-exec-2] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-2] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login Time spent: 3
+2022-11-28 === [http-nio-8080-exec-3] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doLogin
+2022-11-28 === [http-nio-8080-exec-3] === WARN  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doLogin
+2022-11-28 === [http-nio-8080-exec-3] === WARN  === com.example.demo.aop.MemberAccountAspect ==== 帳號或密碼錯誤
+2022-11-28 === [http-nio-8080-exec-3] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doLogin
+2022-11-28 === [http-nio-8080-exec-3] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [com.example.demo.service.ex.PasswordNotMatchException: 帳號或密碼錯誤]
+2022-11-28 === [http-nio-8080-exec-5] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-5] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-5] === INFO  === com.example.demo.aop.MemberAccountAspect ==== Return: login
+2022-11-28 === [http-nio-8080-exec-5] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-5] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login Time spent: 2
+2022-11-28 === [http-nio-8080-exec-8] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doLogin
+2022-11-28 === [http-nio-8080-exec-8] === WARN  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doLogin
+2022-11-28 === [http-nio-8080-exec-8] === WARN  === com.example.demo.aop.MemberAccountAspect ==== 帳號或密碼錯誤
+2022-11-28 === [http-nio-8080-exec-8] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doLogin
+2022-11-28 === [http-nio-8080-exec-8] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [com.example.demo.service.ex.PasswordNotMatchException: 帳號或密碼錯誤]
+2022-11-28 === [http-nio-8080-exec-2] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-2] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-2] === INFO  === com.example.demo.aop.MemberAccountAspect ==== Return: login
+2022-11-28 === [http-nio-8080-exec-2] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-2] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login Time spent: 2
+2022-11-28 === [http-nio-8080-exec-4] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doLogin
+2022-11-28 === [http-nio-8080-exec-4] === WARN  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doLogin
+2022-11-28 === [http-nio-8080-exec-4] === WARN  === com.example.demo.aop.MemberAccountAspect ==== PreparedStatementCallback; bad SQL grammar [ SELECT MA_ID, NAME, ID_NUMBER, BIRTHDAY, PHONE, C_ID, D_ID, ADDRESS FROM mydb.member  WHERE MA_ID = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Table 'mydb.member' doesn't exist
+2022-11-28 === [http-nio-8080-exec-4] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doLogin
+2022-11-28 === [http-nio-8080-exec-4] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT MA_ID, NAME, ID_NUMBER, BIRTHDAY, PHONE, C_ID, D_ID, ADDRESS FROM mydb.member  WHERE MA_ID = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Table 'mydb.member' doesn't exist]
+2022-11-28 === [http-nio-8080-exec-5] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-5] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-5] === INFO  === com.example.demo.aop.MemberAccountAspect ==== Return: login
+2022-11-28 === [http-nio-8080-exec-5] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-5] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login Time spent: 2
+2022-11-28 === [http-nio-8080-exec-4] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doLogin
+2022-11-28 === [http-nio-8080-exec-4] === WARN  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doLogin
+2022-11-28 === [http-nio-8080-exec-4] === WARN  === com.example.demo.aop.MemberAccountAspect ==== 帳號或密碼錯誤
+2022-11-28 === [http-nio-8080-exec-4] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doLogin
+2022-11-28 === [http-nio-8080-exec-4] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [com.example.demo.service.ex.PasswordNotMatchException: 帳號或密碼錯誤]
+2022-11-28 === [http-nio-8080-exec-7] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-7] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-7] === INFO  === com.example.demo.aop.MemberAccountAspect ==== Return: login
+2022-11-28 === [http-nio-8080-exec-7] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-7] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login Time spent: 2
+2022-11-28 === [http-nio-8080-exec-9] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doLogin
+2022-11-28 === [http-nio-8080-exec-9] === WARN  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doLogin
+2022-11-28 === [http-nio-8080-exec-9] === WARN  === com.example.demo.aop.MemberAccountAspect ==== 帳號或密碼錯誤
+2022-11-28 === [http-nio-8080-exec-9] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doLogin
+2022-11-28 === [http-nio-8080-exec-9] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [com.example.demo.service.ex.PasswordNotMatchException: 帳號或密碼錯誤]
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== Return: login
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login
+2022-11-28 === [http-nio-8080-exec-1] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /login Time spent: 2
+2022-11-28 === [http-nio-8080-exec-8] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doLogin
+2022-11-28 === [http-nio-8080-exec-8] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doLogin
+2022-11-28 === [http-nio-8080-exec-8] === INFO  === com.example.demo.aop.MemberAccountAspect ==== Return: redirect:information
+2022-11-28 === [http-nio-8080-exec-8] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doLogin
+2022-11-28 === [http-nio-8080-exec-8] === INFO  === com.example.demo.aop.MemberAccountAspect ==== 訪問 /doLogin Time spent: 12149
+2022-11-28 === [http-nio-8080-exec-7] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [ SELECT ID, C_ID, NAME FROM mydb.district WHERE C_ID = ? ]; nested exception is java.sql.SQLSyntaxErrorException: Table 'mydb.district' doesn't exist]
+2022-11-28 === [http-nio-8080-exec-4] === WARN  === o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver ==== Resolved [org.springframework.jdbc.BadSqlGrammarException: StatementCallback; bad SQL grammar [ SELECT ID, NAME FROM mydb.county ORDER BY ID ]; nested exception is java.sql.SQLSyntaxErrorException: Table 'mydb.county' doesn't exist]

@@ -15,63 +15,71 @@ import org.springframework.stereotype.Repository;
 import com.example.demo.dao.MemberAccountDao;
 import com.example.demo.entity.MemberAccount;
 
+/**
+ * @Function: MemberAccountDaoImpl.java
+ * @Description:
+ * @author: Wilson Lo
+ * @date: 2022/11/28
+ * @MaintenancePersonnel: Wilson Lo
+ */
 @Repository
 public class MemberAccountDaoImpl implements MemberAccountDao {
 
-	@Autowired
-	private JdbcTemplate jdbcTemplate;
+    /** The jdbc template. */
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
 
-	@Autowired
-	private NamedParameterJdbcTemplate jdbcNameTemplate;
+    /** The jdbc name template. */
+    @Autowired
+    private NamedParameterJdbcTemplate jdbcNameTemplate;
 
-	@Override
-	public Integer insert(MemberAccount memberAccount) {
-		// TODO Auto-generated method stub
-		String sql = " INSERT INTO test_project.member_account ( "
-			  	   + "		USERNAME, PASSWORD, SALT, "
-			  	   + "		CREATE_BY, CREATE_TIME, UPDATE_BY, UPDATE_TIME "
-			  	   + " ) "
-			  	   + " VALUE ( "
-			  	   + "		:username, :password, :salt, "
-			  	   + "		:create_by, NOW(), :update_by, NOW() "
-			  	   + " ) ";
+    /**
+     * (non-Javadoc)
+     *
+     * @see com.example.demo.dao.MemberAccountDao#insert(com.example.demo.entity.MemberAccount)
+     */
+    @Override
+    public Integer insert(MemberAccount memberAccount) {
+        String sql = " INSERT INTO mydb.member_account (USERNAME, PASSWORD, SALT, "
+            + "	CREATE_BY, CREATE_TIME, UPDATE_BY, UPDATE_TIME) VALUE ( "
+            + "	:username, :password, :salt, :create_by, NOW(), :update_by, NOW()) ";
 
-		SqlParameterSource paramSource = new BeanPropertySqlParameterSource(memberAccount);
-		KeyHolder keyHolder = new GeneratedKeyHolder();
+        SqlParameterSource paramSource = new BeanPropertySqlParameterSource(memberAccount);
+        KeyHolder keyHolder = new GeneratedKeyHolder();
 
-		jdbcNameTemplate.update(sql, paramSource, keyHolder);
-		return keyHolder.getKey().intValue();
-	}
+        jdbcNameTemplate.update(sql, paramSource, keyHolder);
+        return keyHolder.getKey().intValue();
+    }
 
-	@Override
-	public MemberAccount findMemberAccountByUsername(String username) {
-		// TODO Auto-generated method stub
-		String sql = " SELECT "
-				   + "		ID, USERNAME, PASSWORD, SALT "
-				   + " FROM "
-				   + "		test_project.member_account "
-				   + " WHERE "
-				   + "		USERNAME = ? ";
+    /**
+     * (non-Javadoc)
+     *
+     * @see com.example.demo.dao.MemberAccountDao#findMemberAccountByUsername(java.lang.String)
+     */
+    @Override
+    public MemberAccount findMemberAccountByUsername(String username) {
+        String sql = " SELECT ID, USERNAME, PASSWORD, SALT FROM mydb.member_account WHERE USERNAME = ? ";
 
-		List<MemberAccount> result = jdbcTemplate.query(sql, new BeanPropertyRowMapper<MemberAccount>(MemberAccount.class), new Object[] { username });
-		if(result != null && result.size() > 0) {
-			return result.get(0);
-		}
-		return null;
-	}
+        List<MemberAccount> result = jdbcTemplate.query(sql,
+            new BeanPropertyRowMapper<MemberAccount>(MemberAccount.class), new Object[] {username});
+        if (result != null && result.size() > 0) {
+            return result.get(0);
+        }
+        return null;
+    }
 
-	@Override
-	public Integer update(MemberAccount memberAccount) {
-		// TODO Auto-generated method stub
-		String sql = " UPDATE "
-				   + "		test_project.member_account "
-				   + " SET "
-				   + "		PASSWORD = :password, UPDATE_BY = :update_by, UPDATE_TIME = NOW() "
-				   + " WHERE "
-				   + "		ID = :id ";
+    /**
+     * (non-Javadoc)
+     *
+     * @see com.example.demo.dao.MemberAccountDao#update(com.example.demo.entity.MemberAccount)
+     */
+    @Override
+    public Integer update(MemberAccount memberAccount) {
+        String sql = " UPDATE mydb.member_account SET "
+            + "	PASSWORD = :password, UPDATE_BY = :update_by, UPDATE_TIME = NOW() WHERE ID = :id ";
 
-		SqlParameterSource paramSource = new BeanPropertySqlParameterSource(memberAccount);
-		return jdbcNameTemplate.update(sql, paramSource);
-	}
+        SqlParameterSource paramSource = new BeanPropertySqlParameterSource(memberAccount);
+        return jdbcNameTemplate.update(sql, paramSource);
+    }
 
 }

@@ -10,23 +10,30 @@ import org.springframework.stereotype.Repository;
 import com.example.demo.dao.DistrictDao;
 import com.example.demo.entity.District;
 
+/**
+ * @Function: DistrictDaoImpl.java
+ * @Description:
+ * @author: Wilson Lo
+ * @date: 2022/11/28
+ * @MaintenancePersonnel: Wilson Lo
+ */
 @Repository
 public class DistrictDaoImpl implements DistrictDao {
 
-	@Autowired
-	private JdbcTemplate jdbcTemplate;
+    /** The jdbc template. */
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
 
-	@Override
-	public List<District> findDistrictByC_id(String c_id) {
-		// TODO Auto-generated method stub
-		String sql = " SELECT "
-				   + "		ID, C_ID, NAME "
-				   + " FROM "
-				   + "		test_project.district "
-				   + " WHERE "
-				   + "		C_ID = ? ";
+    /**
+     * (non-Javadoc)
+     *
+     * @see com.example.demo.dao.DistrictDao#findDistrictByC_id(java.lang.String)
+     */
+    @Override
+    public List<District> findDistrictByC_id(String c_id) {
+        String sql = " SELECT ID, C_ID, NAME FROM mydb.district WHERE C_ID = ? ";
 
-		return jdbcTemplate.query(sql, new BeanPropertyRowMapper<District>(District.class), new Object[] { c_id });
-	}
+        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<District>(District.class), new Object[] {c_id});
+    }
 
 }

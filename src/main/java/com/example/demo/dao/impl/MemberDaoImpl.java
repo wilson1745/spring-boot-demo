@@ -13,61 +13,72 @@ import org.springframework.stereotype.Repository;
 import com.example.demo.dao.MemberDao;
 import com.example.demo.entity.Member;
 
+/**
+ * @Function: MemberDaoImpl.java
+ * @Description:
+ * @author: Wilson Lo
+ * @date: 2022/11/28
+ * @MaintenancePersonnel: Wilson Lo
+ */
 @Repository
 public class MemberDaoImpl implements MemberDao {
 
-	@Autowired
-	private JdbcTemplate jdbcTemplate;
+    /** The jdbc template. */
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
 
-	@Autowired
-	private NamedParameterJdbcTemplate jdbcNameTemplate;
+    /** The jdbc name template. */
+    @Autowired
+    private NamedParameterJdbcTemplate jdbcNameTemplate;
 
-	@Override
-	public Integer insert(Member member) {
-		// TODO Auto-generated method stub
-		String sql = " INSERT INTO test_project.member ( "
-				   + "		MA_ID, NAME, ID_NUMBER, BIRTHDAY, PHONE, C_ID, D_ID, ADDRESS, "
-				   + "		CREATE_BY, CREATE_TIME, UPDATE_BY, UPDATE_TIME "
-				   + " ) "
-				   + " VALUE ( "
-				   + "		:ma_id, :name, :id_number, :birthday, :phone, :c_id, :d_id, :address, "
-				   + "		:create_by, NOW(), :update_by, NOW() "
-				   + " ) ";
+    /**
+     * (non-Javadoc)
+     *
+     * @see com.example.demo.dao.MemberDao#insert(com.example.demo.entity.Member)
+     */
+    @Override
+    public Integer insert(Member member) {
+        String sql = " INSERT INTO mydb.member (MA_ID, NAME, ID_NUMBER, BIRTHDAY, PHONE, C_ID, D_ID, ADDRESS, "
+            + "	CREATE_BY, CREATE_TIME, UPDATE_BY, UPDATE_TIME) VALUE ( "
+            + "	:ma_id, :name, :id_number, :birthday, :phone, :c_id, :d_id, :address, "
+            + "	:create_by, NOW(), :update_by, NOW()) ";
 
-		SqlParameterSource paramSource = new BeanPropertySqlParameterSource(member);
-		return jdbcNameTemplate.update(sql, paramSource);
-	}
+        SqlParameterSource paramSource = new BeanPropertySqlParameterSource(member);
+        return jdbcNameTemplate.update(sql, paramSource);
+    }
 
-	@Override
-	public Member findMemberByMa_id(String ma_id) {
-		// TODO Auto-generated method stub
-		String sql = " SELECT "
-				   + "		MA_ID, NAME, ID_NUMBER, BIRTHDAY, PHONE, C_ID, D_ID, ADDRESS "
-				   + " FROM "
-				   + "		test_project.member "
-				   + " WHERE "
-				   + "		MA_ID = ? ";
+    /**
+     * (non-Javadoc)
+     *
+     * @see com.example.demo.dao.MemberDao#findMemberByMa_id(java.lang.String)
+     */
+    @Override
+    public Member findMemberByMa_id(String ma_id) {
+        String sql = " SELECT MA_ID, NAME, ID_NUMBER, BIRTHDAY, PHONE, C_ID, D_ID, ADDRESS FROM mydb.member "
+            + " WHERE MA_ID = ? ";
 
-		List<Member> result = jdbcTemplate.query(sql, new BeanPropertyRowMapper<Member>(Member.class), new Object[] { ma_id });
-		if(result != null && result.size() > 0) {
-			return result.get(0);
-		}
-		return null;
-	}
+        List<Member> result =
+            jdbcTemplate.query(sql, new BeanPropertyRowMapper<Member>(Member.class), new Object[] {ma_id});
+        if (result != null && result.size() > 0) {
+            return result.get(0);
+        }
 
-	@Override
-	public Integer update(Member member) {
-		// TODO Auto-generated method stub
-		String sql = " UPDATE "
-				   + "		test_project.member "
-				   + " SET "
-				   + "		ID_NUMBER = :id_number, BIRTHDAY = :birthday, PHONE = :phone, C_ID = :c_id, D_ID = :d_id, ADDRESS = :address, "
-				   + "		UPDATE_BY = :update_by, UPDATE_TIME = NOW() "
-				   + " WHERE "
-				   + "		MA_ID = :ma_id ";
+        return null;
+    }
 
-		SqlParameterSource paramSource = new BeanPropertySqlParameterSource(member);
-		return jdbcNameTemplate.update(sql, paramSource);
-	}
+    /**
+     * (non-Javadoc)
+     *
+     * @see com.example.demo.dao.MemberDao#update(com.example.demo.entity.Member)
+     */
+    @Override
+    public Integer update(Member member) {
+        String sql = " UPDATE mydb.member SET "
+            + "	ID_NUMBER = :id_number, BIRTHDAY = :birthday, PHONE = :phone, C_ID = :c_id, D_ID = :d_id, ADDRESS = :address, "
+            + "	UPDATE_BY = :update_by, UPDATE_TIME = NOW() WHERE MA_ID = :ma_id ";
+
+        SqlParameterSource paramSource = new BeanPropertySqlParameterSource(member);
+        return jdbcNameTemplate.update(sql, paramSource);
+    }
 
 }

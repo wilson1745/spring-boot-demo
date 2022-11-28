@@ -15,17 +15,31 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+/**
+ * @Function: MemberAccountAspect.java
+ * @Description:
+ * @author: Wilson Lo
+ * @date: 2022/11/28
+ * @MaintenancePersonnel: Wilson Lo
+ */
 @Component
 @Aspect
 public class MemberAccountAspect {
 
-	private static final Logger logger = LoggerFactory.getLogger(MemberAccountAspect.class);
+    /** The Constant logger. */
+    private static final Logger logger = LoggerFactory.getLogger(MemberAccountAspect.class);
 
-	// 設定切入點
-	@Pointcut("execution(* com.example.demo.controller.MemberAccountController.*(..))")
-	public void pointcut() {
-	}
-	
+    /**
+     * 設定切入點 Pointcut.
+     */
+    @Pointcut("execution(* com.example.demo.controller.MemberAccountController.*(..))")
+    public void pointcut() {}
+
+    /**
+     * Before.
+     *
+     * @param joinPoint the join point
+     */
     @Before("pointcut()")
     public void before(JoinPoint joinPoint) {
         System.out.println("=====Before advice starts=====");
@@ -36,6 +50,13 @@ public class MemberAccountAspect {
         System.out.println("=====Before advice ends=====");
     }
 
+    /**
+     * Around.
+     *
+     * @param joinPoint the join point
+     * @return the object
+     * @throws Throwable the throwable
+     */
     @Around("pointcut()")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
         System.err.println("=====Around advice starts=====");
@@ -49,9 +70,14 @@ public class MemberAccountAspect {
 
         System.err.println("=====Around advice ends=====");
 
-        return result;    	
+        return result;
     }
 
+    /**
+     * After.
+     *
+     * @param joinPoint the join point
+     */
     @After("pointcut()")
     public void after(JoinPoint joinPoint) {
         System.out.println("=====After advice starts=====");
@@ -61,7 +87,13 @@ public class MemberAccountAspect {
 
         System.out.println("=====After advice ends=====");
     }
-    
+
+    /**
+     * After return.
+     *
+     * @param joinPoint the join point
+     * @param re the re
+     */
     @AfterReturning(pointcut = "pointcut()", returning = "re")
     public void afterReturn(JoinPoint joinPoint, Object re) {
         System.out.println("=====After Returning advice starts=====");
@@ -70,9 +102,15 @@ public class MemberAccountAspect {
         logger.info("Return: " + re);
         Arrays.stream(joinPoint.getArgs()).forEach(System.out::println);
 
-        System.out.println("=====After Returning advice ends=====");    	
+        System.out.println("=====After Returning advice ends=====");
     }
-    
+
+    /**
+     * After throwing.
+     *
+     * @param joinPoint the join point
+     * @param e the e
+     */
     @AfterThrowing(pointcut = "pointcut()", throwing = "e")
     public void afterThrowing(JoinPoint joinPoint, Throwable e) {
         System.err.println("=====After Throwing advice starts=====");
@@ -81,7 +119,7 @@ public class MemberAccountAspect {
         logger.warn(e.getMessage());
         Arrays.stream(joinPoint.getArgs()).forEach(System.out::println);
 
-        System.err.println("=====After Throwing advice ends=====");    	
+        System.err.println("=====After Throwing advice ends=====");
     }
 
 }
